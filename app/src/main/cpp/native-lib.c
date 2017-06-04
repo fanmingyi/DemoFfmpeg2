@@ -377,8 +377,13 @@ Java_com_example_demoffmpeg_MainActivity_plays(JNIEnv *env, jobject instance, js
                 }
                 LOGE("锁定成功");
                 ANativeWindow_unlockAndPost(nativeWindow);
-//				//
-                usleep(1000*16);
+
+//                //获取帧率tbr fbs
+//                float fram_rate =pFormatCtx->streams[v_stream_idx]->avg_frame_rate.num/pFormatCtx->streams[v_stream_idx]->avg_frame_rate.den;
+//
+
+                //线程休眠防止过快奔溃
+//                usleep(1);
 
 
             }
